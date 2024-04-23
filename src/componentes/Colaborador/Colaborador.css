@@ -1,47 +1,42 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-.card {
-  margin-top: 20px;
-  display: flex;
-  width: 262px;
-  height: 272px;
-  border-radius: 10px 10px 0 0;
-  background: linear-gradient(
-    to bottom,
-    purple 0%,
-    #1900ff83 35%,
-    #ffffff 35%,
-    #ffffff 100%
-  );
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.colaborador {
+  width: 280px;
 }
 
-.imagem img {
-  height: 120px;
+.colaborador .cabecalho {
+  background-color: #f0f0f0;
+  border-radius: 10px 10px 0px 0px;
+}
+.colaborador img {
+  width: 120px;
   border-radius: 50%;
+  position: relative;
+  bottom: -60px;
 }
 
-.conteudo {
-  margin: 10px 5px 5px;
+.colaborador .rodape {
+  background: #ffffff;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 0px 0px 10px 10px;
+  padding-top: 80px;
+  padding-bottom: 40px;
 }
 
-.conteudo h4 {
-  font-size: 16px;
+.colaborador .rodape h4 {
   color: #6278f7;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-size: 18px;
-  font-weight: 600;
-  padding-bottom: 4px;
+  line-height: 22px;
+  font-weight: bold;
+  margin-bottom: 8px;
 }
 
-.conteudo h5 {
-  font-size: 16px;
-  color: black;
-  font-weight: 400;
+.colaborador .rodape h5 {
+  font-size: 18px;
+  line-height: 22px;
+  color: #212121;
+  padding: 0 16px;
 }
