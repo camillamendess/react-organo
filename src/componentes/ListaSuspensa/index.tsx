@@ -1,5 +1,4 @@
 import './ListaSuspensa.css';
-import React from 'react';
 
 interface ListaSuspensaProps {
     aoAlterado: (valor: string) => void

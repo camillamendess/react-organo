@@ -4,7 +4,6 @@ import CampoTexto from '../CampoTexto';
 import ListaSuspensa from '../ListaSuspensa';
 import './Formulario.css';
 import { IColaborador } from '../../compartilhado/interfaces/IColaborador';
-import React from 'react';
 
 interface FormularioProps {
   aoColaboradorCadastrado: (colaborador: IColaborador) => void 
@@ -14,10 +13,11 @@ interface FormularioProps {
 
 const Formulario = (props: FormularioProps) => {
 
-    const [nome, setNome] = useState('')
-    const [cargo, setCargo] = useState('')
-    const [imagem, setImagem] = useState('')
-    const [time, setTime] = useState('')
+    const [nome, setNome] = useState('');
+    const [cargo, setCargo] = useState('');
+    const [imagem, setImagem] = useState('');
+    const [time, setTime] = useState('');
+    const [data, setData] = useState('');
 
     const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
         evento.preventDefault()
@@ -25,7 +25,8 @@ const Formulario = (props: FormularioProps) => {
             nome,
             cargo,
             imagem,
-            time
+            time,
+            data
         })
         setNome('')
         setCargo('')
@@ -56,6 +57,13 @@ const Formulario = (props: FormularioProps) => {
                     placeholder="Digite o endereço da imagem" 
                     valor={imagem}
                     aoAlterado={valor => setImagem(valor)}
+                />
+                <CampoTexto
+                    label="Data"
+                    placeholder="" 
+                    valor={data}
+                    aoAlterado={valor => setData(valor)}
+                    tipo="date"
                 />
                 <ListaSuspensa
                     obrigatorio={true}
